@@ -1,0 +1,24 @@
+{% for message in messages %}
+            {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+            <div class="alert alert-success alert-dismissible fade-in">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                {{message}}
+              </div>
+
+            <!-- <h6 class="success_message py-3 px-1 my-2 text-center">{{message}}</h6> -->
+
+            {% endif %}
+
+
+
+            {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR%}
+            <div class="alert alert-warning alert-dismissible fade-in">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                {{message}}
+              </div>
+
+            <!-- <h6 class="error_message py-3 px-1 my-2 text-center">{{message}}</h6> -->
+
+            {% endif %}
+
+{% endfor %}
